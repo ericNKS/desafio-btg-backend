@@ -13,7 +13,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
                 description = "REST API for processing transactions with MongoDB and RabbitMQ.",
                 contact = @Contact(
                         name = "Backend Team",
-                        email = "backend@example.com"
+                        email = "ek.silva.santos@gmail.com"
                 )
         ),
         servers = {

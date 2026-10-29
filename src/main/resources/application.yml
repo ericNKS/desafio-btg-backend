@@ -2,5 +2,21 @@ spring:
   application:
     name: desafio-btg-backend
 
+  config:
+    import: optional:file:./.env[.properties]
+
+  docker:
+    compose:
+      enabled: false
+
+  mongodb:
+    uri: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_URL:localhost}:${MONGO_PORT:27017}/${MONGO_DATABASE:btg}?authSource=admin
+
+  rabbitmq:
+    host: ${RABBITMQ_URL:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
+
 server:
-  port: 3000
+  port: ${SERVER_PORT:3000}
