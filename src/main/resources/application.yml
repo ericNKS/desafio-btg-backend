@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: desafio-btg-backend
+
+server:
+  port: 3000
